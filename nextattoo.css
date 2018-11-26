@@ -41,19 +41,20 @@ nav ul{
 }
 
 nav ul li{
-	padding: 10px;
+	padding: 13px;
+	margin-top: 15px; 
+    background-color: #770000 ;
+    cursor: pointer; 
+    border: 5px;
+    border-radius: 10px;
 }
 
 nav ul li a{
 	text-decoration: none;
 	color: white;
-	margin: 0px;
-	padding: 0 20px;
-    background-color: #770000;
-    border: 5px;
+	margin: auto;
+	padding:  10px;
     font-weight: bold;
-    cursor: pointer; 
-    border-radius: 30px;
 }
 
 #pessoas {
@@ -112,6 +113,7 @@ nav ul li a{
 	width: 200px;
 	height: 400px;
 	float: right;
+	color:white;
 }
 
 .chat{

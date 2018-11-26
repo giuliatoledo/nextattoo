@@ -1,0 +1,28 @@
+var menu=
+[
+	{"nome":"HOME", "link":"index.html"},
+
+	{"nome":"LOJA",	"link":"loja.html"},
+
+	{"nome":"CATEGORIAS","link":"categorias.html"},
+
+	{
+	"nome":"SOBRE NÓS","link":"sobrenos.html"
+	},
+
+	{
+	"nome":"GARANTIAS","link":"garantias.html"
+	},
+
+	{
+	"nome":"CONTATO","link":"contato.html"
+	},
+
+	{
+	"nome":"BUSCAR"
+	},
+
+	{
+	"nome":"PROFISSIONAL","link":"profissional.html"
+	}
+]

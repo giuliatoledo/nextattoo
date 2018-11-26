@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 	<title>Nextattoo</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="nextattoo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script src="dados.json"></script>
+
+	<script>
+		//menu é uma variavel que contem os dados
+		$(document).ready(function(){
+			for (i=0; i<8; i++){
+				$("#lista-menu").append('<li><a href="'+menu[i].link+'" id="'+menu[i].nome+'">'+menu[i].nome+'</a></li>');
+			}
+		});
+	</script>
 </head>
+-->
+
+<!-- Teste de menu remoto -->
+<script>
+$(document).ready(function(){
+	//requisição http
+	let url ="http://rafaelsperoni.pro.br/tsi/menus.php?user=2018003605"
+	$.getJSON(url, function(dados){
+	//dados é um array com o conteúdo do json
+	console.log(dados);
+	for (i=0; i<8; i++){
+				$("#lista-menu").append('<li><a href="'+dados[i].link+'" id="'+dados[i].titulo+'">'+dados[i].titulo+'</a></li>');
+			}
+});
+});
+</script>
 
 <body class="body">
 
 	<!------------------------= CABEÇALHO ---------------------------------------->
 <header><img class="logotipo" src="nextattologopreto.jpg"></header>
 
-<div class="colunas">
-	<!--------------------------------- MENU -------------------------------------->
+<!--------------------------------- MENU -------------------------------------->
+<div class="colunas">	
 	<div id="principal" align="center">
-	<nav class="flex-container">
-		<ul>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="LOJA">LOJA</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="CATEGORIAS">CATEGORIAS</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="SOBRE">SOBRE NÓS</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="GARANTIAS">GARANTIAS</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="CONTATO">CONTATO</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="BUSCAR">BUSCAR</a></li>
-	      <li><a href="https://www.facebook.com/giulia.toledo.758" id="PROFISSIONAL">PROFISSIONAL</a></li>
+	<nav id="menu" align="center">
+	<ul id="lista-menu">
 	    </ul>
 	</nav>
 </div>
